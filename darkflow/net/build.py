@@ -33,6 +33,9 @@ class TFNet(object):
 	build_train_op = help.build_train_op
 	load_from_ckpt = help.load_from_ckpt
 
+	def saveckpt(self): 
+		self.saver.save(self.sess, './{}_model.ckpt'.format(self.meta['name']))
+
 	def __init__(self, FLAGS, darknet = None):
 		self.ntrain = 0
 

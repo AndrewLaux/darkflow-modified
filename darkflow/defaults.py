@@ -6,6 +6,7 @@ class argHandler(dict):
     _descriptions = {'help, --h, -h': 'show this super helpful message and exit'}
     
     def setDefaults(self):
+        self.define('saveckpt', False, 'save net and weight to a .ckpt file')
         self.define('imgdir', './sample_img/', 'path to testing directory with images')
         self.define('binary', './bin/', 'path to .weights directory')
         self.define('config', './cfg/', 'path to .cfg directory')
